@@ -2,4 +2,14 @@
     <string name="app_name">Lab-1</string>
     <string name="type">Type product</string>
     <string name="name">Company</string>
+    <string name="textview">TextView</string>
+    <string name="mask">Mask</string>
+    <string name="tablet">Tablet</string>
+    <string name="novus">Novus</string>
+    <string name="silpo">Silpo</string>
+    <string name="rozetka">Rozetka</string>
+    <string name="samsung">Samsung</string>
+    <string name="bread">Bread</string>
+    <string name="phone">Phone</string>
+    <string name="pen">Pen</string>
 </resources>
