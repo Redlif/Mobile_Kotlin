@@ -2,15 +2,14 @@ package com.example.lab_1
 
 import android.content.Context
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.RadioButton
-import android.widget.RadioGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_first.*
+
 
 class FirstFragment : Fragment() {
 
@@ -38,16 +37,57 @@ class FirstFragment : Fragment() {
 
     fun ok(view: View) {
 
-        val radio = view.findViewById(R.id.type_product) as RadioGroup
+        val radio = type_product
         val radio2 = company
-        val button1 = radio.checkedRadioButtonId as RadioButton
-        val button2 = radio2.checkedRadioButtonId as RadioButton
-        if(button1 != null && button2 != null) {
-            mListener?.onFragmentInteraction(button1.text.toString() + " and " + button2.text.toString())
+        val button1 = radio.checkedRadioButtonId
+        val button2 = radio2.checkedRadioButtonId
+        val product = findIdProduct(button1)
+        val company = FindIdCompany(button2)
+        if(product != "" && company != "") {
+            mListener?.onFragmentInteraction(product + " and " + company)
         }
         else {
             Toast.makeText(context,"Choose something please", Toast.LENGTH_LONG).show()
         }
+    }
+    fun findIdProduct(buttonId: Int) : String
+    {
+        when (buttonId) {
+            bread.id -> {
+                return bread.text.toString()
+            }
+            tablet.id -> {
+                return tablet.text.toString()
+            }
+            mask.id -> {
+                return mask.text.toString()
+            }
+            pen.id -> {
+                return pen.text.toString()
+            }
+            phone.id -> {
+                return phone.text.toString()
+            }
+        }
+        return ""
+    }
+    fun FindIdCompany(buttonId:Int):String
+    {
+        when (buttonId) {
+            rozetka.id -> {
+                return rozetka.text.toString()
+            }
+            samsung.id -> {
+                return samsung.text.toString()
+            }
+            novus.id -> {
+                return novus.text.toString()
+            }
+            silpo.id -> {
+                return silpo.text.toString()
+            }
+        }
+        return ""
     }
     fun cancel(view: View) {
         mListener?.onFragmentInteraction("")
