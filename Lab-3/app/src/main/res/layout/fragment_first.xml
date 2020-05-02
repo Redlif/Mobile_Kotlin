@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstFragment">
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@android:string/ok"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.213"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.108" />
+
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="76dp"
+        android:layout_marginRight="76dp"
+        android:text="@android:string/cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.722"
+        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.108" />
+
+    <RadioGroup
+        android:id="@+id/type_product"
+        android:layout_width="106dp"
+        android:layout_height="179dp"
+        android:layout_marginTop="64dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintVertical_bias="0.0">
+
+        <RadioButton
+            android:id="@+id/bread"
+            android:layout_width="74dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/bread" />
+
+        <RadioButton
+            android:id="@+id/mask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="22dp"
+            android:text="@string/mask" />
+
+        <RadioButton
+            android:id="@+id/tablet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tablet" />
+
+        <RadioButton
+            android:id="@+id/pen"
+            android:layout_width="82dp"
+            android:layout_height="28dp"
+            android:text="@string/pen" />
+
+        <RadioButton
+            android:id="@+id/phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/phone" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:layout_width="98dp"
+        android:layout_height="155dp"
+        android:id="@+id/company"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.709"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:layout_constraintVertical_bias="0.14">
+
+        <RadioButton
+            android:id="@+id/rozetka"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rozetka" />
+
+        <RadioButton
+            android:id="@+id/samsung"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/samsung" />
+
+        <RadioButton
+            android:id="@+id/novus"
+            android:layout_width="83dp"
+            android:layout_height="34dp"
+            android:text="@string/novus" />
+
+        <RadioButton
+            android:id="@+id/silpo"
+            android:layout_width="75dp"
+            android:layout_height="32dp"
+            android:text="@string/silpo" />
+    </RadioGroup>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
